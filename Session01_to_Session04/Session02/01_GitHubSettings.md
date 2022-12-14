@@ -19,31 +19,3 @@ ssh-keygen
 
 6 - Comando para mostrar la llave de seguridad
 cat ~/.ssh/id_rsa.pub
-
-# Upload project to github
-
-git init
-
-git remote add origin "URL repo"
-
-git status
-
-git add .
-
-git status
-
-git commit -m "Fist Commit"
-
-git push
-
-# Update project to github
-
-git status
-
-git add .
-
-git status
-
-git commit -m "Fist Commit"
-
-git push
