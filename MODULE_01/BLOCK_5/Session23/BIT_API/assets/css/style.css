@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gemunu Libre", sans-serif;
+  background-color: #9f9ee7;
+}
+
+.header {
+  width: 100%;
+  z-index: 1;
+  align-items: center;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.dataPeople,
+.dataAlbum {
+  margin-top: 180px;
+}
