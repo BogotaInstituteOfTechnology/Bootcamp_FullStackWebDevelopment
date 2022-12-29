@@ -1,0 +1,44 @@
+.container{
+    display: grid;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu{
+     grid-column: 1/5;
+    
+     min-height: 100px;
+     background-color: #000;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+.menu ul li{
+
+justify-content: end;
+align-content: center;
+grid-auto-flow: column;
+
+}
+
+.header{
+  
+    background-color: #000;
+    position: fixed;
+    z-index: 100;
+    /* line-height: 80px; */
+    font-size: 35px;
+}
+
+.img-logo{
+    
+    height: 80px;
+    justify-content: start;
+    align-content: center;
+    margin-left: 5%;
+    padding: 10px;
+
+
+
+
+}
