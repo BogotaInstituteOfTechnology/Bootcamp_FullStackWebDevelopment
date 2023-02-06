@@ -1,0 +1,22 @@
+/* Este es un comentario CSS. 
+Los comentarios se utilizan para describir y documentar el código. */
+
+/* Este es un selector de elemento que selecciona todos los elementos <h1> */
+h1 {
+    /* Este es una declaración de propiedad y valor que especifica el color de la fuente */
+    color: blue;
+    /* Este es otro ejemplo de declaración que especifica el tamaño de la fuente */
+    font-size: 18px;
+    /* Este es un tercer ejemplo de declaración que especifica el estilo de la fuente */
+    font-style: italic;
+  }
+  
+  /* Este es otro selector de elemento que selecciona todos los elementos <p> */
+  p {
+    /* Este es un ejemplo de declaración que especifica el color de fondo */
+    background-color: lightgray;
+    /* Este es un ejemplo de declaración que especifica el margen */
+    margin: 20px;
+    /* Este es un ejemplo de declaración que especifica el padding */
+    padding: 10px;
+  }
