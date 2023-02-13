@@ -1,4 +1,4 @@
-# Bootcamp_WebDevelopmentFullStack - Session #09: Branch GIT
+# Bootcamp_WebDevelopmentFullStack - Session #08:  GIT
 
 
 1- Ver ramas locales

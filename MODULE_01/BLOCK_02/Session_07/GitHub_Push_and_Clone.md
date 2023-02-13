@@ -1,6 +1,6 @@
-# Bootcamp_WebDevelopmentFullStack - Session #02: GitHub Commants
+# Bootcamp_WebDevelopmentFullStack - Session #07: GIT
 
-# Upload project to github
+
 
 git init
 
