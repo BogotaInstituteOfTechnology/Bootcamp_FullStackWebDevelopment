@@ -1,34 +1,99 @@
+/** 
+Las propiedades margin y padding en CSS se utilizan para establecer espacios alrededor de los elementos en una página web. Estos espacios pueden ser utilizados para separar elementos entre sí o para ajustar el tamaño y la forma de los elementos en la página.
+
+Margin es el espacio externo alrededor de un elemento. Por ejemplo, si un elemento tiene un margen de 10px, esto significa que habrá 10px de espacio vacío entre el elemento y cualquier otro elemento o borde de la página.
+
+Padding es el espacio interno dentro de un elemento, es decir, entre el contenido de un elemento y sus bordes. Por ejemplo, si un elemento tiene un relleno de 10px, esto significa que habrá 10px de espacio adicional entre el contenido del elemento y sus bordes.
+
+En el ejemplo dado, margin: 0; y padding: 0; significa que se establece un margen y un relleno de 0px para el elemento al que se aplican estas reglas. Esto significa que no habrá ningún espacio adicional alrededor del elemento ni dentro de él, haciendo que los elementos se ajusten lo más estrechamente posible entre sí.
+
+Estos valores pueden ser establecidos en unidades diferentes, como pixels (px), puntos (pt), centímetros (cm) o porcentajes (%), entre otros. Por ejemplo, margin: 10px establece un margen de 10 pixels alrededor del elemento, mientras que padding: 5% establece un relleno del 5% del ancho del elemento padre.
+*/
 * {
   margin: 0;
   padding: 0;
 }
+/** 
+La siguiente regla CSS se aplica al elemento body, que es el elemento raíz de todos los elementos en una página web.
 
+background-color es una propiedad que se utiliza para establecer el color de fondo de un elemento. En este caso, background-color: rgb(180, 194, 221) establece un color de fondo de un tono de azul suave para el elemento body. La sintaxis rgb(180, 194, 221) es una forma de especificar un color en el sistema RGB, donde cada componente (rojo, verde y azul) se especifica como un valor numérico entre 0 y 255.
+
+font-family es una propiedad que se utiliza para establecer la familia de fuentes a utilizar para el texto contenido en un elemento. En este caso, font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; establece la familia de fuentes "Gill Sans" como la primera opción para el texto en el elemento body. Si el navegador no tiene "Gill Sans" disponible, se intentará utilizar "Gill Sans MT", seguido de "Calibri", "Trebuchet MS", y finalmente cualquier fuente sans-serif disponible en el sistema. La sintaxis "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif es una lista de valores separados por comas, que se usa para especificar una lista de fuentes a utilizar en orden de preferencia. Si ninguna de las fuentes en la lista está disponible, el navegador utilizará la fuente predeterminada.
+*/
 body {
   background-color: rgb(180, 194, 221);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+/** 
+La siguiente regla CSS se aplica a todos los elementos con la clase header.
 
+background-color es una propiedad que se utiliza para establecer el color de fondo de un elemento. En este caso, background-color: rgb(209, 205, 199) establece un color de fondo de un tono de gris suave para todos los elementos con la clase header. La sintaxis rgb(209, 205, 199) es una forma de especificar un color en el sistema RGB, donde cada componente (rojo, verde y azul) se especifica como un valor numérico entre 0 y 255.
+
+height es una propiedad que se utiliza para establecer la altura de un elemento. En este caso, height: 70px establece una altura de 70 pixels para todos los elementos con la clase header. La sintaxis 70px es una forma de especificar una altura en pixels, una unidad de medida común en CSS.
+
+Estos valores se aplicarán a todos los elementos con la clase header en la página, lo que permitirá diferenciarlos visualmente de otros elementos y darles un aspecto distintivo. Por ejemplo, estos elementos podrían ser utilizados como un encabezado o una barra de navegación en una página web.
+*/
 .header {
   background-color: rgb(209, 205, 199);
   height: 70px;
 }
+/** 
+La siguiente regla CSS se aplica a todos los elementos con la clase logo.
 
+float es una propiedad que se utiliza para establecer cómo un elemento flota en relación a los elementos que lo rodean. En este caso, float: left establece que el elemento con la clase logo flotará a la izquierda, lo que significa que otros elementos se colocarán a su lado derecho. Esto es útil para crear diseños de página que permiten que varios elementos floten alrededor de un elemento en lugar de apilarse uno encima del otro.
+
+padding es una propiedad que se utiliza para establecer el espacio dentro de un elemento. En este caso, padding: 10px establece un espacio de 10 pixels alrededor del contenido de todos los elementos con la clase logo. La sintaxis 10px es una forma de especificar un padding en pixels, una unidad de medida común en CSS. Esto significa que habrá un espacio de 10 pixels entre el borde del elemento y su contenido, creando un espacio en blanco alrededor del mismo.
+
+Estos valores se aplicarán a todos los elementos con la clase logo en la página, lo que permitirá controlar cómo se presentan estos elementos y cómo interactúan con otros elementos de la página. Por ejemplo, estos elementos podrían ser utilizados como un logotipo o una imagen en una página web.
+*/
 .logo {
   float: left;
   padding: 10px;
 }
+/** 
+La siguiente regla CSS se aplica a todos los elementos con la clase menu.
 
+float es una propiedad que se utiliza para establecer cómo un elemento flota en relación a los elementos que lo rodean. En este caso, float: right establece que el elemento con la clase menu flotará a la derecha, lo que significa que otros elementos se colocarán a su lado izquierdo. Esto es útil para crear diseños de página que permiten que varios elementos floten alrededor de un elemento en lugar de apilarse uno encima del otro.
+
+margin es una propiedad que se utiliza para establecer el espacio alrededor de un elemento. En este caso, margin: 24px establece un margen de 24 pixels alrededor de todos los elementos con la clase menu. La sintaxis 24px es una forma de especificar un margen en pixels, una unidad de medida común en CSS. Esto significa que habrá un espacio de 24 pixels entre el borde del elemento y otros elementos en la página.
+
+Estos valores se aplicarán a todos los elementos con la clase menu en la página, lo que permitirá controlar cómo se presentan estos elementos y cómo interactúan con otros elementos de la página. Por ejemplo, estos elementos podrían ser utilizados como un menú de navegación en una página web.
+*/
 .menu {
   float: right;
   margin: 24px;
 }
+/** 
+La siguiente regla CSS se aplica a todos los elementos de anclaje (a) que están dentro de elementos con la clase menu.
 
+color es una propiedad que se utiliza para establecer el color del texto. En este caso, color: black establece el color del texto en negro.
+
+text-decoration es una propiedad que se utiliza para establecer el estilo de decoración del texto. En este caso, text-decoration: none establece que no se debe aplicar ninguna decoración al texto, lo que significa que no habrá subrayados, tachaduras u otros estilos decorativos.
+
+padding es una propiedad que se utiliza para establecer el espacio dentro de un elemento. En este caso, padding: 15px establece un espacio de 15 pixels alrededor del contenido de todos los elementos de anclaje (a) que están dentro de elementos con la clase menu. La sintaxis 15px es una forma de especificar un padding en pixels, una unidad de medida común en CSS. Esto significa que habrá un espacio de 15 pixels entre el borde del elemento y su contenido, creando un espacio en blanco alrededor del mismo.
+
+Estos valores se aplicarán a todos los elementos de anclaje (a) que están dentro de elementos con la clase menu en la página, lo que permitirá controlar cómo se presentan estos elementos y cómo interactúan con otros elementos de la página. Por ejemplo, estos elementos podrían ser utilizados como enlaces en un menú de navegación en una página web.
+*/
 .menu a {
   color: black;
   text-decoration: none;
   padding: 15px;
 }
+/** 
+La siguiente regla CSS se aplica a elementos con la clase banner.
 
+background-image es una propiedad que se utiliza para establecer una imagen de fondo para un elemento. En este caso, background-image: url(../img/banner.jpg) establece una imagen de fondo para los elementos con la clase banner que se encuentran en la ruta ../img/banner.jpg. La sintaxis url(...) es una forma de especificar una URL, que puede ser una ruta absoluta o relativa a la ubicación del archivo CSS.
+
+height es una propiedad que se utiliza para establecer la altura de un elemento. En este caso, height: 550px establece una altura de 550 pixels para los elementos con la clase banner. La sintaxis 550px es una forma de especificar una altura en pixels, una unidad de medida común en CSS.
+
+background-repeat es una propiedad que se utiliza para establecer cómo se repite una imagen de fondo. En este caso, background-repeat: no-repeat establece que la imagen de fondo no se repetirá. Esto significa que la imagen solo se mostrará una vez y no se repetirá en el fondo.
+
+background-size es una propiedad que se utiliza para establecer el tamaño de una imagen de fondo. En este caso, background-size: cover establece que la imagen de fondo cubrirá completamente el elemento. Esto significa que la imagen se escalará para que cubra todo el elemento, sin importar su tamaño original, mientras se mantenga la proporción.
+
+color es una propiedad que se utiliza para establecer el color del texto. En este caso, color: white establece el color del texto en blanco.
+
+Estos valores se aplicarán a todos los elementos con la clase banner en la página, lo que permitirá controlar cómo se presenta la imagen de fondo y cómo se presenta el texto en el elemento. Por ejemplo, este elemento podría ser utilizado como un banner principal en una página web.
+*/
 .banner {
   background-image: url(../img/banner.jpg);
   height: 550px;
@@ -36,20 +101,30 @@ body {
   background-size: cover;
   color: white;
 }
-
+/** 
+La regla "banner h1" se aplica a un elemento "h1" dentro de "banner" y alinea el texto a la derecha, establece el tamaño de la fuente en 80 píxeles y agrega un relleno de 150 píxeles y 50 píxeles.
+*/
 .banner h1 {
   text-align: right;
   font-size: 80px;
   padding: 150px 50px;
 }
-
+/** 
+La clase "tablaCategorias" se aplica a un elemento "tablaCategorias" y establece el ancho automático y el margen centrado.
+*/
 .tablaCategorias {
   width: auto;
   margin: auto;
 }
+/** 
+La clase "cat" se aplica a un elemento "cat" y agrega un relleno de 50 píxeles.
+*/
 .cat {
   padding: 50px;
 }
+/** 
+La clase "boton_categorias" se aplica a un elemento "boton_categorias" y establece el tamaño, el color de fondo, el borde redondeado, el tamaño de la fuente, el margen, el relleno, la altura de la línea, el alineamiento del texto y el flotamiento.
+*/
 .boton_categorias {
   width: 80px;
   height: 80px;
@@ -62,43 +137,59 @@ body {
   text-align: center;
   float: left;
 }
+/** 
 
+*/
 .boton_categorias:hover {
   opacity: 0.3;
 }
+/** 
 
+*/
 .boton_categorias a {
   text-decoration: none;
   color: black;
   padding: 5px 5px 5px 5px;
 }
+/** 
 
+*/
 .biografia {
   background-color: black;
   color: white;
   padding: 20px 100px 70px 100px;
   text-align: justify;
 }
+/** 
 
+*/
 .biografia h2 {
   text-align: center;
   padding: 10px;
 }
+/** 
 
+*/
 .premios {
   margin: 0;
   text-align: center;
   padding: 10px;
 }
+/** 
 
+*/
 .premios table {
   padding: 30px 100px 30px 100px;
 }
+/** 
 
+*/
 .premios h2 {
   padding: 30px 0px;
 }
+/** 
 
+*/
 .premios h3 {
   background-color: rgb(255, 145, 19);
   border: 2px solid blue;
@@ -106,11 +197,15 @@ body {
   padding: 15px 30px 15px 30px;
   margin: 40px;
 }
+/** 
 
+*/
 .premios td {
   text-align: left;
 }
+/** 
 
+*/
 footer {
   background-color: black;
   color: white;
