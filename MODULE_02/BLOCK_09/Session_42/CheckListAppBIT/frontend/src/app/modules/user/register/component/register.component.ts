@@ -3,19 +3,20 @@ import { UserService } from '../../../../services/user/user.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss'],
 })
-export class LoginComponent {
-  loginData: any = {};
+export class RegisterComponent {
+  registerData: any = {};
 
   constructor(private _userService: UserService, private _router: Router) {}
 
-  login() {
-    this._userService.login(this.loginData).subscribe({
+  register() {
+    this._userService.registerUser(this.registerData).subscribe({
       next: (v) => {
         localStorage.setItem('token', v.CLTOKEN23);
+        this._router.navigate(['/createTask'])
         console.log(v);
       },
       error: (e) => {
@@ -23,5 +24,4 @@ export class LoginComponent {
       },
     });
   }
-
 }

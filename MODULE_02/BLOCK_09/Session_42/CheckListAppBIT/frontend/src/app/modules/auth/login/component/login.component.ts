@@ -16,6 +16,7 @@ export class LoginComponent {
     this._userService.login(this.loginData).subscribe({
       next: (v) => {
         localStorage.setItem('token', v.CLTOKEN23);
+        this._router.navigate(['/checkList'])
         console.log(v);
       },
       error: (e) => {
