@@ -12,5 +12,7 @@ router.post(
 );
 
 router.get("/listTask", auth, boardController.listTask);
+router.delete("/deleteTask/:_id", auth, boardController.deleteTask);
+router.put("/updateTask", auth, boardController.updateTask);
 
 export default router;
