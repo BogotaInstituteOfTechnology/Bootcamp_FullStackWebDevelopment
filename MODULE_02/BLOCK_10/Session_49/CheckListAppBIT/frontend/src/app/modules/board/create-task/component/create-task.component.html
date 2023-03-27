@@ -1,0 +1,19 @@
+<div class="form">
+    <mat-card class="card">
+        <mat-card-title>Create Task</mat-card-title>
+        <mat-card-content>
+            <div class="container">
+                <mat-form-field>
+                    <input [(ngModel)]="createTaskData.name" matInput placeholder="Name">
+                </mat-form-field>
+                <mat-form-field>
+                    <input [(ngModel)]="createTaskData.description" matInput placeholder="Description">
+                </mat-form-field>
+                <input type="file" (change)="onFileSelected($event)">
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button (click)="createTask()" class="button" mat-raised-button color="accent">Create Task</button> 
+        </mat-card-actions>
+    </mat-card>
+</div>
