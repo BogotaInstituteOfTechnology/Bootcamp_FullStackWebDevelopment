@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Ejemplo de clases en JavaScript</h1>
+
+    <script src="persona.js"></script>
+    <script src="trabajador.js"></script>
+
+    <script>
+      // Creamos una nueva instancia de la clase Trabajador
+      const trabajador1 = new Trabajador("Pepita", 25, "Programadora");
+
+      // Mostramos la información del trabajador en la consola del navegador
+      console.log(trabajador1.obtenerInformacion());
+    </script>
+  </body>
+</html>
