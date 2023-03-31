@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChecklistComponent } from './checklist/component/checklist.component';
 import { CreateTaskComponent } from './create-task/component/create-task.component';
+import { AuthGuard } from 'src/app/core/security/guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,12 +12,15 @@ const routes: Routes = [
       {
         path: 'checkList',
         component: ChecklistComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'createTask',
         component: CreateTaskComponent,
+        canActivate: [AuthGuard],
       },
     ],
+    canActivate: [AuthGuard],
   },
   {
     path: 'createTask',
@@ -25,12 +29,15 @@ const routes: Routes = [
       {
         path: 'checkList',
         component: ChecklistComponent,
+        canActivate: [AuthGuard],
       },
       {
         path: 'createTask',
         component: CreateTaskComponent,
+        canActivate: [AuthGuard],
       },
     ],
+    canActivate: [AuthGuard],
   },
 ];
 
