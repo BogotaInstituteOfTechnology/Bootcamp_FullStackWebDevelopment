@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,13 +19,15 @@ $frontend-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$frontend-theme: mat.define-light-theme((
-  color: (
-    primary: $frontend-primary,
-    accent: $frontend-accent,
-    warn: $frontend-warn,
+$frontend-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $frontend-primary,
+      accent: $frontend-accent,
+      warn: $frontend-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -35,5 +36,48 @@ $frontend-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-color: #153d77;
+  --secondary-color: #6c757d;
+  --white-color: #fff;
+  --success-color: #198754;
+  --delete-color: #dc3545;
+  --background-color: #f2f2f2;
+}
+
+.bit-snackBarSuccessful {
+  color: white;
+  --mdc-snackbar-container-color: var(--success-color);
+  --mat-mdc-snack-bar-button-color: var(--white-color);
+}
+
+.bit-snackBarError {
+  max-width: max-content !important;
+  color: white;
+  --mdc-snackbar-container-color: var(--delete-color);
+  border-color: #f5c6cb;
+
+  --mat-mdc-snack-bar-button-color: var(--white-color);
+}
+
+.light-success-snackbar {
+  color: #155724;
+  --mdc-snackbar-container-color: #d4edda;
+  --mat-mdc-snack-bar-button-color: darkgreen;
+}
+
+.light-error-snackbar {
+  color: #721c24;
+  --mdc-snackbar-container-color: #f8d7da;
+  border-color: #f5c6cb;
+  --mat-mdc-snack-bar-button-color: darkred;
+}
