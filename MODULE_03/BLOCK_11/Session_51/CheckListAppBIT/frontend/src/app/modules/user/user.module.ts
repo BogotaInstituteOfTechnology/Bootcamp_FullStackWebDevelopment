@@ -11,7 +11,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
+import { SharedModule } from '../../shared/shared.module';
+import { TokenInterceptorService } from 'src/app/core/security/interceptors/token-interceptor.service';
 
 @NgModule({
   declarations: [RegisterComponent],
@@ -26,6 +29,14 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatToolbarModule,
     HttpClientModule,
+    SharedModule,
+  ],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    },
   ],
 })
 export class UserModule {}

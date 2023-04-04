@@ -17,12 +17,10 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { HttpClientModule } from '@angular/common/http';
 
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
-  declarations: [
-    ChecklistComponent,
-    CreateTaskComponent
-  ],
+  declarations: [ChecklistComponent, CreateTaskComponent],
   imports: [
     CommonModule,
     BoardRoutingModule,
@@ -35,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     HttpClientModule,
     MatExpansionModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    SharedModule,
+  ],
 })
-export class BoardModule { }
+export class BoardModule {}
