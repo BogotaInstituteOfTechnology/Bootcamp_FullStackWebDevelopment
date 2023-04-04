@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+  <ul>
+    <a routerLink="checkList">Mi Checklist</a>
+  </ul>
+  <ul>
+    <a routerLink="createTask">Crear tarea</a>
+  </ul>
+  <span class="spacer"></span>
+  <ul>
+    <a *ngIf="!_userService.isLogged()" mat-button routerLink="signup"
+      >Registrar</a
+    >
+    <a *ngIf="!_userService.isLogged()" mat-button routerLink="login">Login</a>
+    <a
+      *ngIf="_userService.isLogged()"
+      mat-button
+      (click)="_userService.logout()"
+      >Salir</a
+    >
+  </ul>
+</mat-toolbar>
+<router-outlet></router-outlet>

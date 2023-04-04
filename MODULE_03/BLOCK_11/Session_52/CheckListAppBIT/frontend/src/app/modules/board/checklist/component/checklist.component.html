@@ -1,0 +1,66 @@
+<div class="accordion_display">
+  <div class="accordion_size">
+    <mat-accordion multi="true" *ngIf="checkList.length">
+      <mat-expansion-panel *ngFor="let task of checkList" hideToggle="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <span class="text_center">{{ task.name }}</span>
+            <span class="spacer"></span>
+            <button
+              class="btDone"
+              *ngIf="task.status == 'done'"
+              mat-raised-button
+            >
+              {{ task.status }}
+            </button>
+            <button
+              class="btInProgress"
+              *ngIf="task.status == 'in progress'"
+              mat-raised-button
+            >
+              {{ task.status }}
+            </button>
+            <button
+              class="btToDo"
+              *ngIf="task.status == 'to-do'"
+              mat-raised-button
+            >
+              {{ task.status }}
+            </button>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          {{ task.description }}
+        </mat-panel-description>
+        <mat-panel-description>
+          <img class="image_center" src="{{ task.image_url }}" />
+        </mat-panel-description>
+        <mat-action-row>
+          <button
+            class="btSelectTodo"
+            mat-button
+            (click)="updateTask(task, 'to-do')"
+          >
+            ToDo
+          </button>
+          <button
+            class="btSelectInProgress"
+            mat-button
+            (click)="updateTask(task, 'in progress')"
+          >
+            In Progress
+          </button>
+          <button
+            class="btSelectDone"
+            mat-button
+            (click)="updateTask(task, 'done')"
+          >
+            Done
+          </button>
+          <span class="spacer"></span>
+          <mat-icon color="primary" (click)="deleteTask(task)">delete</mat-icon>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>
