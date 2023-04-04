@@ -15,7 +15,11 @@ export class CreateTaskComponent {
   };
   selectedFile: any;
 
-  constructor(private _taskService: BoardService, private _router: Router, private _alertComponent: SnackbarComponent) {}
+  constructor(
+    private _taskService: BoardService,
+    private _router: Router,
+    private _alertComponent: SnackbarComponent
+  ) {}
 
   onFileSelected(event: any) {
     console.log(event);
@@ -30,7 +34,7 @@ export class CreateTaskComponent {
     this._taskService.createTask(fd).subscribe({
       next: (v) => {
         this._router.navigate(['/checkList']);
-        this._alertComponent.openSnackBarSuccessful("Tarea creada con exito");
+        this._alertComponent.openSnackBarSuccessful('Tarea creada con exito');
       },
       error: (e) => {
         console.log(e);
